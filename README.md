@@ -28,30 +28,36 @@ http://localhost:8080/gambar
 - Database tersimpan di `application/database/sismul2.sqlite`
 - File gambar tersimpan di `uploads/gambar`
 
+## Lokasi Code CRUD
+
 Code CRUD utamanya ada di sini:
 
-Controller CRUD: Gambar.php
-Model database: Gambar_model.php
-View daftar: index.php
-View tambah/edit: form.php
-View detail: detail.php
-Route URL: routes.php
-Koneksi database: database.php
-Yang paling penting untuk CRUD adalah application/controllers/Gambar.php.
+- Controller CRUD: `application/controllers/Gambar.php`
+- Model database: `application/models/Gambar_model.php`
+- View daftar: `application/views/gambar/index.php`
+- View tambah/edit: `application/views/gambar/form.php`
+- View detail: `application/views/gambar/detail.php`
+- Route URL: `application/config/routes.php`
+- Koneksi database: `application/config/database.php`
 
-Mapping fungsi CRUD-nya:
+Yang paling penting untuk CRUD adalah `application/controllers/Gambar.php`.
 
-index() = Read / tampilkan semua gambar
-tambah() = halaman form tambah
-simpan() = Create / simpan gambar baru
-detail($id) = Read detail
-edit($id) = halaman form edit
-update($id) = Update data gambar
-hapus($id) = Delete gambar
-Model Gambar_model.php berisi query database:
+## Mapping Fungsi CRUD
 
-all()
-find($id)
-insert($data)
-update($id, $data)
-delete($id)
+- `index()` = Read / tampilkan semua gambar
+- `tambah()` = halaman form tambah
+- `simpan()` = Create / simpan gambar baru
+- `detail($id)` = Read detail
+- `edit($id)` = halaman form edit
+- `update($id)` = Update data gambar
+- `hapus($id)` = Delete gambar
+
+## Query Model
+
+Model `Gambar_model.php` berisi query database:
+
+- `all()`
+- `find($id)`
+- `insert($data)`
+- `update($id, $data)`
+- `delete($id)`
