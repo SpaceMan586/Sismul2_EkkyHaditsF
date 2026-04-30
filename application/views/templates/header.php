@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php echo html_escape(isset($title) ? $title : 'CRUD Gambar'); ?></title>
+    <style>
+        *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}.nav{background:#fff;border-bottom:1px solid #e5e7eb;padding:16px 28px;font-weight:700}.wrap{max-width:1120px;margin:28px auto;padding:0 20px}.top{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}.card{background:#fff;border:1px solid #e5e7eb;border-radius:8px;box-shadow:0 8px 20px rgba(15,23,42,.06);overflow:hidden}.btn{display:inline-block;padding:9px 13px;border-radius:6px;text-decoration:none;border:1px solid #d1d5db;background:#fff;color:#172033;cursor:pointer;font-size:14px}.btn.primary{background:#2563eb;color:#fff;border-color:#2563eb}.btn.danger{color:#b91c1c;border-color:#fecaca}.alert{padding:12px 14px;border-radius:6px;margin-bottom:14px}.success{background:#dcfce7;color:#166534}.error{background:#fee2e2;color:#991b1b}table{width:100%;border-collapse:collapse}th,td{padding:14px;border-bottom:1px solid #eef2f7;text-align:left;vertical-align:middle}th{background:#f8fafc}.image-cell{width:170px}.thumb-frame{width:142px;height:96px;border:1px solid #e5e7eb;border-radius:8px;background:linear-gradient(135deg,#f8fafc,#eef2f7);display:flex;align-items:center;justify-content:center;overflow:hidden}.thumb{width:100%;height:100%;object-fit:contain;display:block}.detail-media{padding:18px;background:#f8fafc;border-bottom:1px solid #e5e7eb}.preview-frame{width:100%;min-height:360px;max-height:620px;border:1px solid #e5e7eb;border-radius:8px;background:linear-gradient(135deg,#ffffff,#eef2f7);display:flex;align-items:center;justify-content:center;overflow:hidden}.preview{display:block;max-width:100%;max-height:600px;width:auto;height:auto;object-fit:contain}.form{padding:20px}.form-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:22px;align-items:start}.field{margin-bottom:16px}label{display:block;font-weight:700;margin-bottom:7px}input[type=text],textarea,input[type=file]{width:100%;border:1px solid #d1d5db;border-radius:6px;padding:10px;font:inherit;background:#fff}textarea{min-height:120px}.upload-preview{position:sticky;top:16px}.upload-frame{width:100%;aspect-ratio:4/3;border:1px dashed #cbd5e1;border-radius:8px;background:#f8fafc;display:flex;align-items:center;justify-content:center;overflow:hidden}.upload-frame img{width:100%;height:100%;object-fit:contain;display:block}.upload-empty{padding:20px;text-align:center;color:#64748b;font-size:14px}.actions{display:flex;gap:8px;justify-content:flex-end;align-items:center;flex-wrap:wrap}.muted{color:#64748b}.empty{text-align:center;color:#64748b;padding:38px}.detail-body{padding:20px}.detail-body p{line-height:1.65;margin:0}.inline{display:inline}.title{margin:0}.subtitle{margin:4px 0 0;color:#64748b}@media(max-width:780px){.top{align-items:flex-start;flex-direction:column}.form-grid{grid-template-columns:1fr}.upload-preview{position:static}.image-cell{width:128px}.thumb-frame{width:112px;height:84px}.preview-frame{min-height:240px}.preview{max-height:420px}th:nth-child(3),td:nth-child(3){display:none}}
+    </style>
+</head>
+<body>
+    <div class="nav">CRUD Gambar CodeIgniter</div>
+    <main class="wrap">
+        <?php if ($this->session->flashdata('success')): ?>
+            <div class="alert success"><?php echo html_escape($this->session->flashdata('success')); ?></div>
+        <?php endif; ?>
+        <?php if ($this->session->flashdata('error')): ?>
+            <div class="alert error"><?php echo html_escape($this->session->flashdata('error')); ?></div>
+        <?php endif; ?>

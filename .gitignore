@@ -1,0 +1,8 @@
+/vendor
+/application/database/*.sqlite
+/uploads/gambar/*
+!/uploads/gambar/.gitkeep
+/application/logs/*
+!/application/logs/index.html
+/application/cache/*
+!/application/cache/index.html
