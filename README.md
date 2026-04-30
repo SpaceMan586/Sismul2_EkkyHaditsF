@@ -58,7 +58,7 @@ delete($id)
 
 Code CRUD utamanya ada di sini:
 
-Controller CRUD: Gambar.php
+Controller CRUD: Gambar.php 
 Model database: Gambar_model.php
 View daftar: index.php
 View tambah/edit: form.php
