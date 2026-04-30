@@ -55,3 +55,31 @@ find($id)
 insert($data)
 update($id, $data)
 delete($id)
+
+Code CRUD utamanya ada di sini:
+
+Controller CRUD: Gambar.php
+Model database: Gambar_model.php
+View daftar: index.php
+View tambah/edit: form.php
+View detail: detail.php
+Route URL: routes.php
+Koneksi database: database.php
+Yang paling penting untuk CRUD adalah application/controllers/Gambar.php.
+
+Mapping fungsi CRUD-nya:
+
+index() = Read / tampilkan semua gambar
+tambah() = halaman form tambah
+simpan() = Create / simpan gambar baru
+detail($id) = Read detail
+edit($id) = halaman form edit
+update($id) = Update data gambar
+hapus($id) = Delete gambar
+Model Gambar_model.php berisi query database:
+
+all()
+find($id)
+insert($data)
+update($id, $data)
+delete($id)
