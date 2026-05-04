@@ -5,6 +5,13 @@
  * File ini memuat konfigurasi dasar lalu menjalankan inti CodeIgniter.
  */
 
+if (PHP_SAPI === 'cli-server') {
+    $file_statis = __DIR__ . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    if (is_file($file_statis)) {
+        return FALSE;
+    }
+}
+
 define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
 switch (ENVIRONMENT) {
